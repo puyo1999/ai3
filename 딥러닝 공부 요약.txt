@@ -1,0 +1,29 @@
+활성화 함수(Activation Function)
+
+	Why? data를 비선형으로 바꾸기 위해서이다
+	망이 깊어진다 -> 딥 러닝
+		장점
+		같은 수준의 정확도를 나타내더라도 매개변수가 적게 필요
+		필요한 연산의 수가 줄어듬
+		
+	What? How?
+		Sigmoid
+			좌, 우 무한대의 경우 미분값이 0으로 수렴하는 문제
+		ReLU
+			음수는 버리고, 양수는 미분이 1로 그대로 살림
+		softmax 함수
+			
+	tf.nn.softmax(before_layer)
+	
+LSTM Layer
+	Why? 
+		vanishing gradient 문제 해결
+
+DQN Layer
+	Why?
+		Q-Network는 얕은 층 ANN 구조 사용했지만, DQN은 깊은 층의 CNN 사용
+		인간의 해마 영감을 얻어 Replay Memory 기법 적용
+	How?
+		순차적인 경험데이터 ( tuple{S,A,R,S'} )를 이용해서 학습하면,
+		이전 행동에 따라 수집되는 데이터의 형태가 일정한 패턴으로 고정되는 문제
+		
